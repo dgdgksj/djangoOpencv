@@ -13,11 +13,10 @@
       <button type="submit">Upload</button>
   </form>
 
-
-{% if post %}
-<img src="{{ post.document.url }}">
-<p>File uploaded at: <a href="{{ post.document.url }}">{{ post.document }}</a></p>
-{% endif %}
+  {% if post %}
+  <img src="{{ post.document.url }}">
+  <p>File uploaded at: <a href="{{ post.document.url }}">{{ post.document }}</a></p>
+  {% endif %}
 
   <p><a href="{% url 'first_view' %}">Return to home</a></p>
 <!-- image upload end -->
