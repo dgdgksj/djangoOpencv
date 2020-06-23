@@ -6,20 +6,24 @@
  </head>
  <body>
 
+<h1 style="font-size:50px; text-align: center">superpixel</h1>
 <!-- image upload start-->
+<div style="font-size:50px; text-align: center">
   <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
       {{ form.as_p }}
-      <button type="submit">Upload</button>
+      <button type="submit">upload</button>
   </form>
+</div>
 
-  {% if post %}
-  <img src="{{ post.document.url }}">
-  <p>File uploaded at: <a href="{{ post.document.url }}">{{ post.document }}</a></p>
-  {% endif %}
+<div style="font-size:50px; text-align: center">
+{% if post %}
+<img src="{{ post.document.url }}">
+{% endif %}
 
-  <p><a href="{% url 'first_view' %}">Return to home</a></p>
+  <p><a href="{% url 'first_view' %}">home</a></p>
 <!-- image upload end -->
+</div>
 
 </body>
 </html>

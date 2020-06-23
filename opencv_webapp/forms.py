@@ -9,5 +9,5 @@ class UploadImageForm(forms.Form):
 class ImageUploadForm(forms.ModelForm):
     class Meta:
         model = ImageUploadModel
-        fields = ('description', 'document' )
+        fields = ('Description', 'document' )
 #control + alt + i
